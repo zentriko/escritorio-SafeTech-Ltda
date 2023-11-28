@@ -35,6 +35,8 @@ namespace NMA_Admin
                 // Realizar la conexión a la base de datos
                 string connectionString = "Data Source=xe;User Id=nma;Password=nma123;";
 
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
                 using (OracleConnection connection = new OracleConnection(connectionString))
                 {
                     try
@@ -46,6 +48,8 @@ namespace NMA_Admin
                         string query = "DELETE FROM cliente WHERE id_cliente = :idCliente";
 
                         // Crear el comando con la consulta y la conexión
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
                         using (OracleCommand command = new OracleCommand(query, connection))
                         {
                             // Asignar el valor del parámetro
@@ -63,12 +67,16 @@ namespace NMA_Admin
                                 MessageBox.Show("Cliente no encontrado o no se pudo eliminar.");
                             }
                         }
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Error al eliminar cliente: " + ex.Message);
                     }
                 }
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             }
             else
             {

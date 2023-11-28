@@ -76,7 +76,7 @@ namespace NMA_Admin
 
         private void btnPagos_Click(object sender, EventArgs e)
         {
-            AbrirSubMenu(new FrmPagos());
+            AbrirSubMenu(new FrmControlpago());
         }
 
         private void label1_Click(object sender, EventArgs e)

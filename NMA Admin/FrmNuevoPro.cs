@@ -22,6 +22,8 @@ namespace NMA_Admin
             string usuario = textBox5.Text;
             string contrasena = textBox6.Text;
 
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             using (OracleConnection connection = new OracleConnection(ConnectionString))
             {
                 try
@@ -31,6 +33,8 @@ namespace NMA_Admin
                     string query = "INSERT INTO profesional (id_pro, Nombre, Apellido, Especialidad, Usuario, Contrasena) " +
                                    "VALUES (:ID, :Nombre, :Apellido, :Especialidad, :Usuario, :Contrasena)";
 
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
                     using (OracleCommand command = new OracleCommand(query, connection))
                     {
                         command.Parameters.Add("ID", OracleType.VarChar).Value = id;
@@ -44,12 +48,16 @@ namespace NMA_Admin
 
                         MessageBox.Show("Profesional registrado correctamente en la base de datos.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al registrar el profesional en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
         }
 
     }

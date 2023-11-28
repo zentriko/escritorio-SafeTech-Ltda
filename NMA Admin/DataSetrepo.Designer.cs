@@ -20,17 +20,17 @@ namespace NMA_Admin {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("nmabd")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSetrepo")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class nmabd : global::System.Data.DataSet {
+    public partial class DataSetrepo : global::System.Data.DataSet {
         
-        private CLIENTEDataTable tableCLIENTE;
+        private REPORTEDataTable tableREPORTE;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public nmabd() {
+        public DataSetrepo() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace NMA_Admin {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected nmabd(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSetrepo(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace NMA_Admin {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["CLIENTE"] != null)) {
-                    base.Tables.Add(new CLIENTEDataTable(ds.Tables["CLIENTE"]));
+                if ((ds.Tables["REPORTE"] != null)) {
+                    base.Tables.Add(new REPORTEDataTable(ds.Tables["REPORTE"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace NMA_Admin {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public CLIENTEDataTable CLIENTE {
+        public REPORTEDataTable REPORTE {
             get {
-                return this.tableCLIENTE;
+                return this.tableREPORTE;
             }
         }
         
@@ -127,7 +127,7 @@ namespace NMA_Admin {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            nmabd cln = ((nmabd)(base.Clone()));
+            DataSetrepo cln = ((DataSetrepo)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace NMA_Admin {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["CLIENTE"] != null)) {
-                    base.Tables.Add(new CLIENTEDataTable(ds.Tables["CLIENTE"]));
+                if ((ds.Tables["REPORTE"] != null)) {
+                    base.Tables.Add(new REPORTEDataTable(ds.Tables["REPORTE"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace NMA_Admin {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableCLIENTE = ((CLIENTEDataTable)(base.Tables["CLIENTE"]));
+            this.tableREPORTE = ((REPORTEDataTable)(base.Tables["REPORTE"]));
             if ((initTable == true)) {
-                if ((this.tableCLIENTE != null)) {
-                    this.tableCLIENTE.InitVars();
+                if ((this.tableREPORTE != null)) {
+                    this.tableREPORTE.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace NMA_Admin {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "nmabd";
+            this.DataSetName = "DataSetrepo";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/nmabd.xsd";
+            this.Namespace = "http://tempuri.org/DataSetrepo.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableCLIENTE = new CLIENTEDataTable();
-            base.Tables.Add(this.tableCLIENTE);
+            this.tableREPORTE = new REPORTEDataTable();
+            base.Tables.Add(this.tableREPORTE);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeCLIENTE() {
+        private bool ShouldSerializeREPORTE() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace NMA_Admin {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            nmabd ds = new nmabd();
+            DataSetrepo ds = new DataSetrepo();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,35 +270,35 @@ namespace NMA_Admin {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void CLIENTERowChangeEventHandler(object sender, CLIENTERowChangeEvent e);
+        public delegate void REPORTERowChangeEventHandler(object sender, REPORTERowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class CLIENTEDataTable : global::System.Data.TypedTableBase<CLIENTERow> {
+        public partial class REPORTEDataTable : global::System.Data.TypedTableBase<REPORTERow> {
             
-            private global::System.Data.DataColumn columnID_CLIENTE;
+            private global::System.Data.DataColumn columnID_REPORTE;
             
-            private global::System.Data.DataColumn columnNOMBRE;
+            private global::System.Data.DataColumn columnNUMERO;
             
-            private global::System.Data.DataColumn columnAPELLIDO;
+            private global::System.Data.DataColumn columnTITULO;
             
-            private global::System.Data.DataColumn columnTIPO_EMPRESA;
+            private global::System.Data.DataColumn columnTIPO;
             
-            private global::System.Data.DataColumn columnCORREO;
+            private global::System.Data.DataColumn columnDESCRIPCION;
             
-            private global::System.Data.DataColumn columnUSUARIO;
+            private global::System.Data.DataColumn columnFECHA_CREACION;
             
-            private global::System.Data.DataColumn columnCONTRASENA;
+            private global::System.Data.DataColumn columnADMINISTRADOR_ID;
             
-            private global::System.Data.DataColumn columnFECHA_REGISTRO;
+            private global::System.Data.DataColumn columnCLIENTE_ID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CLIENTEDataTable() {
-                this.TableName = "CLIENTE";
+            public REPORTEDataTable() {
+                this.TableName = "REPORTE";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +306,7 @@ namespace NMA_Admin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal CLIENTEDataTable(global::System.Data.DataTable table) {
+            internal REPORTEDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,72 +323,72 @@ namespace NMA_Admin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected CLIENTEDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected REPORTEDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn ID_CLIENTEColumn {
+            public global::System.Data.DataColumn ID_REPORTEColumn {
                 get {
-                    return this.columnID_CLIENTE;
+                    return this.columnID_REPORTE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NOMBREColumn {
+            public global::System.Data.DataColumn NUMEROColumn {
                 get {
-                    return this.columnNOMBRE;
+                    return this.columnNUMERO;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn APELLIDOColumn {
+            public global::System.Data.DataColumn TITULOColumn {
                 get {
-                    return this.columnAPELLIDO;
+                    return this.columnTITULO;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TIPO_EMPRESAColumn {
+            public global::System.Data.DataColumn TIPOColumn {
                 get {
-                    return this.columnTIPO_EMPRESA;
+                    return this.columnTIPO;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CORREOColumn {
+            public global::System.Data.DataColumn DESCRIPCIONColumn {
                 get {
-                    return this.columnCORREO;
+                    return this.columnDESCRIPCION;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn USUARIOColumn {
+            public global::System.Data.DataColumn FECHA_CREACIONColumn {
                 get {
-                    return this.columnUSUARIO;
+                    return this.columnFECHA_CREACION;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CONTRASENAColumn {
+            public global::System.Data.DataColumn ADMINISTRADOR_IDColumn {
                 get {
-                    return this.columnCONTRASENA;
+                    return this.columnADMINISTRADOR_ID;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn FECHA_REGISTROColumn {
+            public global::System.Data.DataColumn CLIENTE_IDColumn {
                 get {
-                    return this.columnFECHA_REGISTRO;
+                    return this.columnCLIENTE_ID;
                 }
             }
             
@@ -403,59 +403,59 @@ namespace NMA_Admin {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CLIENTERow this[int index] {
+            public REPORTERow this[int index] {
                 get {
-                    return ((CLIENTERow)(this.Rows[index]));
+                    return ((REPORTERow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CLIENTERowChangeEventHandler CLIENTERowChanging;
+            public event REPORTERowChangeEventHandler REPORTERowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CLIENTERowChangeEventHandler CLIENTERowChanged;
+            public event REPORTERowChangeEventHandler REPORTERowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CLIENTERowChangeEventHandler CLIENTERowDeleting;
+            public event REPORTERowChangeEventHandler REPORTERowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event CLIENTERowChangeEventHandler CLIENTERowDeleted;
+            public event REPORTERowChangeEventHandler REPORTERowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddCLIENTERow(CLIENTERow row) {
+            public void AddREPORTERow(REPORTERow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CLIENTERow AddCLIENTERow(decimal ID_CLIENTE, string NOMBRE, string APELLIDO, string TIPO_EMPRESA, string CORREO, string USUARIO, string CONTRASENA, System.DateTime FECHA_REGISTRO) {
-                CLIENTERow rowCLIENTERow = ((CLIENTERow)(this.NewRow()));
+            public REPORTERow AddREPORTERow(decimal ID_REPORTE, decimal NUMERO, string TITULO, string TIPO, string DESCRIPCION, System.DateTime FECHA_CREACION, string ADMINISTRADOR_ID, decimal CLIENTE_ID) {
+                REPORTERow rowREPORTERow = ((REPORTERow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        ID_CLIENTE,
-                        NOMBRE,
-                        APELLIDO,
-                        TIPO_EMPRESA,
-                        CORREO,
-                        USUARIO,
-                        CONTRASENA,
-                        FECHA_REGISTRO};
-                rowCLIENTERow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowCLIENTERow);
-                return rowCLIENTERow;
+                        ID_REPORTE,
+                        NUMERO,
+                        TITULO,
+                        TIPO,
+                        DESCRIPCION,
+                        FECHA_CREACION,
+                        ADMINISTRADOR_ID,
+                        CLIENTE_ID};
+                rowREPORTERow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowREPORTERow);
+                return rowREPORTERow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CLIENTERow FindByID_CLIENTE(decimal ID_CLIENTE) {
-                return ((CLIENTERow)(this.Rows.Find(new object[] {
-                            ID_CLIENTE})));
+            public REPORTERow FindByID_REPORTE(decimal ID_REPORTE) {
+                return ((REPORTERow)(this.Rows.Find(new object[] {
+                            ID_REPORTE})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                CLIENTEDataTable cln = ((CLIENTEDataTable)(base.Clone()));
+                REPORTEDataTable cln = ((REPORTEDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -463,77 +463,77 @@ namespace NMA_Admin {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new CLIENTEDataTable();
+                return new REPORTEDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnID_CLIENTE = base.Columns["ID_CLIENTE"];
-                this.columnNOMBRE = base.Columns["NOMBRE"];
-                this.columnAPELLIDO = base.Columns["APELLIDO"];
-                this.columnTIPO_EMPRESA = base.Columns["TIPO_EMPRESA"];
-                this.columnCORREO = base.Columns["CORREO"];
-                this.columnUSUARIO = base.Columns["USUARIO"];
-                this.columnCONTRASENA = base.Columns["CONTRASENA"];
-                this.columnFECHA_REGISTRO = base.Columns["FECHA_REGISTRO"];
+                this.columnID_REPORTE = base.Columns["ID_REPORTE"];
+                this.columnNUMERO = base.Columns["NUMERO"];
+                this.columnTITULO = base.Columns["TITULO"];
+                this.columnTIPO = base.Columns["TIPO"];
+                this.columnDESCRIPCION = base.Columns["DESCRIPCION"];
+                this.columnFECHA_CREACION = base.Columns["FECHA_CREACION"];
+                this.columnADMINISTRADOR_ID = base.Columns["ADMINISTRADOR_ID"];
+                this.columnCLIENTE_ID = base.Columns["CLIENTE_ID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnID_CLIENTE = new global::System.Data.DataColumn("ID_CLIENTE", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_CLIENTE);
-                this.columnNOMBRE = new global::System.Data.DataColumn("NOMBRE", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNOMBRE);
-                this.columnAPELLIDO = new global::System.Data.DataColumn("APELLIDO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAPELLIDO);
-                this.columnTIPO_EMPRESA = new global::System.Data.DataColumn("TIPO_EMPRESA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTIPO_EMPRESA);
-                this.columnCORREO = new global::System.Data.DataColumn("CORREO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCORREO);
-                this.columnUSUARIO = new global::System.Data.DataColumn("USUARIO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnUSUARIO);
-                this.columnCONTRASENA = new global::System.Data.DataColumn("CONTRASENA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCONTRASENA);
-                this.columnFECHA_REGISTRO = new global::System.Data.DataColumn("FECHA_REGISTRO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFECHA_REGISTRO);
+                this.columnID_REPORTE = new global::System.Data.DataColumn("ID_REPORTE", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_REPORTE);
+                this.columnNUMERO = new global::System.Data.DataColumn("NUMERO", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNUMERO);
+                this.columnTITULO = new global::System.Data.DataColumn("TITULO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTITULO);
+                this.columnTIPO = new global::System.Data.DataColumn("TIPO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIPO);
+                this.columnDESCRIPCION = new global::System.Data.DataColumn("DESCRIPCION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDESCRIPCION);
+                this.columnFECHA_CREACION = new global::System.Data.DataColumn("FECHA_CREACION", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFECHA_CREACION);
+                this.columnADMINISTRADOR_ID = new global::System.Data.DataColumn("ADMINISTRADOR_ID", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnADMINISTRADOR_ID);
+                this.columnCLIENTE_ID = new global::System.Data.DataColumn("CLIENTE_ID", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCLIENTE_ID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_CLIENTE}, true));
-                this.columnID_CLIENTE.AllowDBNull = false;
-                this.columnID_CLIENTE.Unique = true;
-                this.columnNOMBRE.MaxLength = 50;
-                this.columnAPELLIDO.MaxLength = 50;
-                this.columnTIPO_EMPRESA.MaxLength = 50;
-                this.columnCORREO.MaxLength = 128;
-                this.columnUSUARIO.MaxLength = 20;
-                this.columnCONTRASENA.MaxLength = 20;
+                                this.columnID_REPORTE}, true));
+                this.columnID_REPORTE.AllowDBNull = false;
+                this.columnID_REPORTE.Unique = true;
+                this.columnNUMERO.AllowDBNull = false;
+                this.columnTITULO.MaxLength = 50;
+                this.columnTIPO.MaxLength = 50;
+                this.columnDESCRIPCION.MaxLength = 499;
+                this.columnFECHA_CREACION.AllowDBNull = false;
+                this.columnADMINISTRADOR_ID.MaxLength = 8;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CLIENTERow NewCLIENTERow() {
-                return ((CLIENTERow)(this.NewRow()));
+            public REPORTERow NewREPORTERow() {
+                return ((REPORTERow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new CLIENTERow(builder);
+                return new REPORTERow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(CLIENTERow);
+                return typeof(REPORTERow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.CLIENTERowChanged != null)) {
-                    this.CLIENTERowChanged(this, new CLIENTERowChangeEvent(((CLIENTERow)(e.Row)), e.Action));
+                if ((this.REPORTERowChanged != null)) {
+                    this.REPORTERowChanged(this, new REPORTERowChangeEvent(((REPORTERow)(e.Row)), e.Action));
                 }
             }
             
@@ -541,8 +541,8 @@ namespace NMA_Admin {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.CLIENTERowChanging != null)) {
-                    this.CLIENTERowChanging(this, new CLIENTERowChangeEvent(((CLIENTERow)(e.Row)), e.Action));
+                if ((this.REPORTERowChanging != null)) {
+                    this.REPORTERowChanging(this, new REPORTERowChangeEvent(((REPORTERow)(e.Row)), e.Action));
                 }
             }
             
@@ -550,8 +550,8 @@ namespace NMA_Admin {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.CLIENTERowDeleted != null)) {
-                    this.CLIENTERowDeleted(this, new CLIENTERowChangeEvent(((CLIENTERow)(e.Row)), e.Action));
+                if ((this.REPORTERowDeleted != null)) {
+                    this.REPORTERowDeleted(this, new REPORTERowChangeEvent(((REPORTERow)(e.Row)), e.Action));
                 }
             }
             
@@ -559,14 +559,14 @@ namespace NMA_Admin {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.CLIENTERowDeleting != null)) {
-                    this.CLIENTERowDeleting(this, new CLIENTERowChangeEvent(((CLIENTERow)(e.Row)), e.Action));
+                if ((this.REPORTERowDeleting != null)) {
+                    this.REPORTERowDeleting(this, new REPORTERowChangeEvent(((REPORTERow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveCLIENTERow(CLIENTERow row) {
+            public void RemoveREPORTERow(REPORTERow row) {
                 this.Rows.Remove(row);
             }
             
@@ -575,7 +575,7 @@ namespace NMA_Admin {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                nmabd ds = new nmabd();
+                DataSetrepo ds = new DataSetrepo();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -593,7 +593,7 @@ namespace NMA_Admin {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "CLIENTEDataTable";
+                attribute2.FixedValue = "REPORTEDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -637,222 +637,188 @@ namespace NMA_Admin {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class CLIENTERow : global::System.Data.DataRow {
+        public partial class REPORTERow : global::System.Data.DataRow {
             
-            private CLIENTEDataTable tableCLIENTE;
+            private REPORTEDataTable tableREPORTE;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal CLIENTERow(global::System.Data.DataRowBuilder rb) : 
+            internal REPORTERow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableCLIENTE = ((CLIENTEDataTable)(this.Table));
+                this.tableREPORTE = ((REPORTEDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public decimal ID_CLIENTE {
+            public decimal ID_REPORTE {
                 get {
-                    return ((decimal)(this[this.tableCLIENTE.ID_CLIENTEColumn]));
+                    return ((decimal)(this[this.tableREPORTE.ID_REPORTEColumn]));
                 }
                 set {
-                    this[this.tableCLIENTE.ID_CLIENTEColumn] = value;
+                    this[this.tableREPORTE.ID_REPORTEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string NOMBRE {
+            public decimal NUMERO {
                 get {
-                    try {
-                        return ((string)(this[this.tableCLIENTE.NOMBREColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NOMBRE\' de la tabla \'CLIENTE\' es DBNull.", e);
-                    }
+                    return ((decimal)(this[this.tableREPORTE.NUMEROColumn]));
                 }
                 set {
-                    this[this.tableCLIENTE.NOMBREColumn] = value;
+                    this[this.tableREPORTE.NUMEROColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string APELLIDO {
+            public string TITULO {
                 get {
                     try {
-                        return ((string)(this[this.tableCLIENTE.APELLIDOColumn]));
+                        return ((string)(this[this.tableREPORTE.TITULOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'APELLIDO\' de la tabla \'CLIENTE\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TITULO\' de la tabla \'REPORTE\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCLIENTE.APELLIDOColumn] = value;
+                    this[this.tableREPORTE.TITULOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string TIPO_EMPRESA {
+            public string TIPO {
                 get {
                     try {
-                        return ((string)(this[this.tableCLIENTE.TIPO_EMPRESAColumn]));
+                        return ((string)(this[this.tableREPORTE.TIPOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TIPO_EMPRESA\' de la tabla \'CLIENTE\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TIPO\' de la tabla \'REPORTE\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCLIENTE.TIPO_EMPRESAColumn] = value;
+                    this[this.tableREPORTE.TIPOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string CORREO {
+            public string DESCRIPCION {
                 get {
                     try {
-                        return ((string)(this[this.tableCLIENTE.CORREOColumn]));
+                        return ((string)(this[this.tableREPORTE.DESCRIPCIONColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CORREO\' de la tabla \'CLIENTE\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DESCRIPCION\' de la tabla \'REPORTE\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCLIENTE.CORREOColumn] = value;
+                    this[this.tableREPORTE.DESCRIPCIONColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string USUARIO {
+            public System.DateTime FECHA_CREACION {
+                get {
+                    return ((global::System.DateTime)(this[this.tableREPORTE.FECHA_CREACIONColumn]));
+                }
+                set {
+                    this[this.tableREPORTE.FECHA_CREACIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string ADMINISTRADOR_ID {
                 get {
                     try {
-                        return ((string)(this[this.tableCLIENTE.USUARIOColumn]));
+                        return ((string)(this[this.tableREPORTE.ADMINISTRADOR_IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'USUARIO\' de la tabla \'CLIENTE\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ADMINISTRADOR_ID\' de la tabla \'REPORTE\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCLIENTE.USUARIOColumn] = value;
+                    this[this.tableREPORTE.ADMINISTRADOR_IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string CONTRASENA {
+            public decimal CLIENTE_ID {
                 get {
                     try {
-                        return ((string)(this[this.tableCLIENTE.CONTRASENAColumn]));
+                        return ((decimal)(this[this.tableREPORTE.CLIENTE_IDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CONTRASENA\' de la tabla \'CLIENTE\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CLIENTE_ID\' de la tabla \'REPORTE\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableCLIENTE.CONTRASENAColumn] = value;
+                    this[this.tableREPORTE.CLIENTE_IDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime FECHA_REGISTRO {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableCLIENTE.FECHA_REGISTROColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FECHA_REGISTRO\' de la tabla \'CLIENTE\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCLIENTE.FECHA_REGISTROColumn] = value;
-                }
+            public bool IsTITULONull() {
+                return this.IsNull(this.tableREPORTE.TITULOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsNOMBRENull() {
-                return this.IsNull(this.tableCLIENTE.NOMBREColumn);
+            public void SetTITULONull() {
+                this[this.tableREPORTE.TITULOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetNOMBRENull() {
-                this[this.tableCLIENTE.NOMBREColumn] = global::System.Convert.DBNull;
+            public bool IsTIPONull() {
+                return this.IsNull(this.tableREPORTE.TIPOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsAPELLIDONull() {
-                return this.IsNull(this.tableCLIENTE.APELLIDOColumn);
+            public void SetTIPONull() {
+                this[this.tableREPORTE.TIPOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetAPELLIDONull() {
-                this[this.tableCLIENTE.APELLIDOColumn] = global::System.Convert.DBNull;
+            public bool IsDESCRIPCIONNull() {
+                return this.IsNull(this.tableREPORTE.DESCRIPCIONColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTIPO_EMPRESANull() {
-                return this.IsNull(this.tableCLIENTE.TIPO_EMPRESAColumn);
+            public void SetDESCRIPCIONNull() {
+                this[this.tableREPORTE.DESCRIPCIONColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTIPO_EMPRESANull() {
-                this[this.tableCLIENTE.TIPO_EMPRESAColumn] = global::System.Convert.DBNull;
+            public bool IsADMINISTRADOR_IDNull() {
+                return this.IsNull(this.tableREPORTE.ADMINISTRADOR_IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCORREONull() {
-                return this.IsNull(this.tableCLIENTE.CORREOColumn);
+            public void SetADMINISTRADOR_IDNull() {
+                this[this.tableREPORTE.ADMINISTRADOR_IDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCORREONull() {
-                this[this.tableCLIENTE.CORREOColumn] = global::System.Convert.DBNull;
+            public bool IsCLIENTE_IDNull() {
+                return this.IsNull(this.tableREPORTE.CLIENTE_IDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsUSUARIONull() {
-                return this.IsNull(this.tableCLIENTE.USUARIOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetUSUARIONull() {
-                this[this.tableCLIENTE.USUARIOColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCONTRASENANull() {
-                return this.IsNull(this.tableCLIENTE.CONTRASENAColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCONTRASENANull() {
-                this[this.tableCLIENTE.CONTRASENAColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsFECHA_REGISTRONull() {
-                return this.IsNull(this.tableCLIENTE.FECHA_REGISTROColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetFECHA_REGISTRONull() {
-                this[this.tableCLIENTE.FECHA_REGISTROColumn] = global::System.Convert.DBNull;
+            public void SetCLIENTE_IDNull() {
+                this[this.tableREPORTE.CLIENTE_IDColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -860,22 +826,22 @@ namespace NMA_Admin {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class CLIENTERowChangeEvent : global::System.EventArgs {
+        public class REPORTERowChangeEvent : global::System.EventArgs {
             
-            private CLIENTERow eventRow;
+            private REPORTERow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CLIENTERowChangeEvent(CLIENTERow row, global::System.Data.DataRowAction action) {
+            public REPORTERowChangeEvent(REPORTERow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public CLIENTERow Row {
+            public REPORTERow Row {
                 get {
                     return this.eventRow;
                 }
@@ -891,7 +857,7 @@ namespace NMA_Admin {
         }
     }
 }
-namespace NMA_Admin.nmabdTableAdapters {
+namespace NMA_Admin.DataSetrepoTableAdapters {
     
     
     /// <summary>
@@ -903,35 +869,27 @@ namespace NMA_Admin.nmabdTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class CLIENTETableAdapter : global::System.ComponentModel.Component {
+    public partial class REPORTETableAdapter : global::System.ComponentModel.Component {
         
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         private global::System.Data.OracleClient.OracleDataAdapter _adapter;
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
         
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         private global::System.Data.OracleClient.OracleConnection _connection;
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
         
         private global::System.Data.OracleClient.OracleTransaction _transaction;
         
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         private global::System.Data.OracleClient.OracleCommand[] _commandCollection;
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
         
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public CLIENTETableAdapter() {
+        public REPORTETableAdapter() {
             this.ClearBeforeFill = true;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         protected internal global::System.Data.OracleClient.OracleDataAdapter Adapter {
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             get {
                 if ((this._adapter == null)) {
                     this.InitAdapter();
@@ -942,9 +900,7 @@ namespace NMA_Admin.nmabdTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         internal global::System.Data.OracleClient.OracleConnection Connection {
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             get {
                 if ((this._connection == null)) {
                     this.InitConnection();
@@ -964,9 +920,7 @@ namespace NMA_Admin.nmabdTableAdapters {
                 }
                 for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
                     if ((this.CommandCollection[i] != null)) {
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
                         ((global::System.Data.OracleClient.OracleCommand)(this.CommandCollection[i])).Connection = value;
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
                     }
                 }
             }
@@ -1000,9 +954,7 @@ namespace NMA_Admin.nmabdTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         protected global::System.Data.OracleClient.OracleCommand[] CommandCollection {
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             get {
                 if ((this._commandCollection == null)) {
                     this.InitCommandCollection();
@@ -1025,110 +977,93 @@ namespace NMA_Admin.nmabdTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitAdapter() {
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             this._adapter = new global::System.Data.OracleClient.OracleDataAdapter();
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "CLIENTE";
-            tableMapping.ColumnMappings.Add("ID_CLIENTE", "ID_CLIENTE");
-            tableMapping.ColumnMappings.Add("NOMBRE", "NOMBRE");
-            tableMapping.ColumnMappings.Add("APELLIDO", "APELLIDO");
-            tableMapping.ColumnMappings.Add("TIPO_EMPRESA", "TIPO_EMPRESA");
-            tableMapping.ColumnMappings.Add("CORREO", "CORREO");
-            tableMapping.ColumnMappings.Add("USUARIO", "USUARIO");
-            tableMapping.ColumnMappings.Add("CONTRASENA", "CONTRASENA");
-            tableMapping.ColumnMappings.Add("FECHA_REGISTRO", "FECHA_REGISTRO");
+            tableMapping.DataSetTable = "REPORTE";
+            tableMapping.ColumnMappings.Add("ID_REPORTE", "ID_REPORTE");
+            tableMapping.ColumnMappings.Add("NUMERO", "NUMERO");
+            tableMapping.ColumnMappings.Add("TITULO", "TITULO");
+            tableMapping.ColumnMappings.Add("TIPO", "TIPO");
+            tableMapping.ColumnMappings.Add("DESCRIPCION", "DESCRIPCION");
+            tableMapping.ColumnMappings.Add("FECHA_CREACION", "FECHA_CREACION");
+            tableMapping.ColumnMappings.Add("ADMINISTRADOR_ID", "ADMINISTRADOR_ID");
+            tableMapping.ColumnMappings.Add("CLIENTE_ID", "CLIENTE_ID");
             this._adapter.TableMappings.Add(tableMapping);
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             this._adapter.DeleteCommand = new global::System.Data.OracleClient.OracleCommand();
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""NMA"".""CLIENTE"" WHERE ((""ID_CLIENTE"" = :Original_ID_CLIENTE) AND ((:IsNull_NOMBRE = 1 AND ""NOMBRE"" IS NULL) OR (""NOMBRE"" = :Original_NOMBRE)) AND ((:IsNull_APELLIDO = 1 AND ""APELLIDO"" IS NULL) OR (""APELLIDO"" = :Original_APELLIDO)) AND ((:IsNull_TIPO_EMPRESA = 1 AND ""TIPO_EMPRESA"" IS NULL) OR (""TIPO_EMPRESA"" = :Original_TIPO_EMPRESA)) AND ((:IsNull_CORREO = 1 AND ""CORREO"" IS NULL) OR (""CORREO"" = :Original_CORREO)) AND ((:IsNull_USUARIO = 1 AND ""USUARIO"" IS NULL) OR (""USUARIO"" = :Original_USUARIO)) AND ((:IsNull_CONTRASENA = 1 AND ""CONTRASENA"" IS NULL) OR (""CONTRASENA"" = :Original_CONTRASENA)) AND ((:IsNull_FECHA_REGISTRO = 1 AND ""FECHA_REGISTRO"" IS NULL) OR (""FECHA_REGISTRO"" = :Original_FECHA_REGISTRO)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""NMA"".""REPORTE"" WHERE ((""ID_REPORTE"" = :Original_ID_REPORTE) AND (""NUMERO"" = :Original_NUMERO) AND ((:IsNull_TITULO = 1 AND ""TITULO"" IS NULL) OR (""TITULO"" = :Original_TITULO)) AND ((:IsNull_TIPO = 1 AND ""TIPO"" IS NULL) OR (""TIPO"" = :Original_TIPO)) AND ((:IsNull_DESCRIPCION = 1 AND ""DESCRIPCION"" IS NULL) OR (""DESCRIPCION"" = :Original_DESCRIPCION)) AND (""FECHA_CREACION"" = :Original_FECHA_CREACION) AND ((:IsNull_ADMINISTRADOR_ID = 1 AND ""ADMINISTRADOR_ID"" IS NULL) OR (""ADMINISTRADOR_ID"" = :Original_ADMINISTRADOR_ID)) AND ((:IsNull_CLIENTE_ID = 1 AND ""CLIENTE_ID"" IS NULL) OR (""CLIENTE_ID"" = :Original_CLIENTE_ID)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_ID_CLIENTE", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "ID_CLIENTE", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_NOMBRE", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "NOMBRE", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_NOMBRE", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "NOMBRE", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_APELLIDO", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "APELLIDO", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_APELLIDO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "APELLIDO", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_TIPO_EMPRESA", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "TIPO_EMPRESA", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_TIPO_EMPRESA", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "TIPO_EMPRESA", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_CORREO", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "CORREO", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_CORREO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "CORREO", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_USUARIO", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "USUARIO", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_USUARIO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "USUARIO", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_CONTRASENA", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "CONTRASENA", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_CONTRASENA", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "CONTRASENA", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_FECHA_REGISTRO", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "FECHA_REGISTRO", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_FECHA_REGISTRO", global::System.Data.OracleClient.OracleType.DateTime, 0, global::System.Data.ParameterDirection.Input, "FECHA_REGISTRO", global::System.Data.DataRowVersion.Original, false, null));
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_ID_REPORTE", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "ID_REPORTE", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_NUMERO", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "NUMERO", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_TITULO", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "TITULO", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_TITULO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "TITULO", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_TIPO", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "TIPO", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_TIPO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "TIPO", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_DESCRIPCION", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "DESCRIPCION", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_DESCRIPCION", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "DESCRIPCION", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_FECHA_CREACION", global::System.Data.OracleClient.OracleType.DateTime, 0, global::System.Data.ParameterDirection.Input, "FECHA_CREACION", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_ADMINISTRADOR_ID", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "ADMINISTRADOR_ID", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_ADMINISTRADOR_ID", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "ADMINISTRADOR_ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_CLIENTE_ID", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "CLIENTE_ID", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_CLIENTE_ID", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "CLIENTE_ID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OracleClient.OracleCommand();
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO \"NMA\".\"CLIENTE\" (\"ID_CLIENTE\", \"NOMBRE\", \"APELLIDO\", \"TIPO_EMPRESA\", " +
-                "\"CORREO\", \"USUARIO\", \"CONTRASENA\", \"FECHA_REGISTRO\") VALUES (:ID_CLIENTE, :NOMBR" +
-                "E, :APELLIDO, :TIPO_EMPRESA, :CORREO, :USUARIO, :CONTRASENA, :FECHA_REGISTRO)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO \"NMA\".\"REPORTE\" (\"ID_REPORTE\", \"NUMERO\", \"TITULO\", \"TIPO\", \"DESCRIPCI" +
+                "ON\", \"FECHA_CREACION\", \"ADMINISTRADOR_ID\", \"CLIENTE_ID\") VALUES (:ID_REPORTE, :N" +
+                "UMERO, :TITULO, :TIPO, :DESCRIPCION, :FECHA_CREACION, :ADMINISTRADOR_ID, :CLIENT" +
+                "E_ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("ID_CLIENTE", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "ID_CLIENTE", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("NOMBRE", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "NOMBRE", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("APELLIDO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "APELLIDO", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("TIPO_EMPRESA", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "TIPO_EMPRESA", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("CORREO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "CORREO", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("USUARIO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "USUARIO", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("CONTRASENA", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "CONTRASENA", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("FECHA_REGISTRO", global::System.Data.OracleClient.OracleType.DateTime, 0, global::System.Data.ParameterDirection.Input, "FECHA_REGISTRO", global::System.Data.DataRowVersion.Current, false, null));
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("ID_REPORTE", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "ID_REPORTE", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("NUMERO", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "NUMERO", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("TITULO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "TITULO", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("TIPO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "TIPO", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("DESCRIPCION", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "DESCRIPCION", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("FECHA_CREACION", global::System.Data.OracleClient.OracleType.DateTime, 0, global::System.Data.ParameterDirection.Input, "FECHA_CREACION", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("ADMINISTRADOR_ID", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "ADMINISTRADOR_ID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("CLIENTE_ID", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "CLIENTE_ID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OracleClient.OracleCommand();
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE ""NMA"".""CLIENTE"" SET ""ID_CLIENTE"" = :ID_CLIENTE, ""NOMBRE"" = :NOMBRE, ""APELLIDO"" = :APELLIDO, ""TIPO_EMPRESA"" = :TIPO_EMPRESA, ""CORREO"" = :CORREO, ""USUARIO"" = :USUARIO, ""CONTRASENA"" = :CONTRASENA, ""FECHA_REGISTRO"" = :FECHA_REGISTRO WHERE ((""ID_CLIENTE"" = :Original_ID_CLIENTE) AND ((:IsNull_NOMBRE = 1 AND ""NOMBRE"" IS NULL) OR (""NOMBRE"" = :Original_NOMBRE)) AND ((:IsNull_APELLIDO = 1 AND ""APELLIDO"" IS NULL) OR (""APELLIDO"" = :Original_APELLIDO)) AND ((:IsNull_TIPO_EMPRESA = 1 AND ""TIPO_EMPRESA"" IS NULL) OR (""TIPO_EMPRESA"" = :Original_TIPO_EMPRESA)) AND ((:IsNull_CORREO = 1 AND ""CORREO"" IS NULL) OR (""CORREO"" = :Original_CORREO)) AND ((:IsNull_USUARIO = 1 AND ""USUARIO"" IS NULL) OR (""USUARIO"" = :Original_USUARIO)) AND ((:IsNull_CONTRASENA = 1 AND ""CONTRASENA"" IS NULL) OR (""CONTRASENA"" = :Original_CONTRASENA)) AND ((:IsNull_FECHA_REGISTRO = 1 AND ""FECHA_REGISTRO"" IS NULL) OR (""FECHA_REGISTRO"" = :Original_FECHA_REGISTRO)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE ""NMA"".""REPORTE"" SET ""ID_REPORTE"" = :ID_REPORTE, ""NUMERO"" = :NUMERO, ""TITULO"" = :TITULO, ""TIPO"" = :TIPO, ""DESCRIPCION"" = :DESCRIPCION, ""FECHA_CREACION"" = :FECHA_CREACION, ""ADMINISTRADOR_ID"" = :ADMINISTRADOR_ID, ""CLIENTE_ID"" = :CLIENTE_ID WHERE ((""ID_REPORTE"" = :Original_ID_REPORTE) AND (""NUMERO"" = :Original_NUMERO) AND ((:IsNull_TITULO = 1 AND ""TITULO"" IS NULL) OR (""TITULO"" = :Original_TITULO)) AND ((:IsNull_TIPO = 1 AND ""TIPO"" IS NULL) OR (""TIPO"" = :Original_TIPO)) AND ((:IsNull_DESCRIPCION = 1 AND ""DESCRIPCION"" IS NULL) OR (""DESCRIPCION"" = :Original_DESCRIPCION)) AND (""FECHA_CREACION"" = :Original_FECHA_CREACION) AND ((:IsNull_ADMINISTRADOR_ID = 1 AND ""ADMINISTRADOR_ID"" IS NULL) OR (""ADMINISTRADOR_ID"" = :Original_ADMINISTRADOR_ID)) AND ((:IsNull_CLIENTE_ID = 1 AND ""CLIENTE_ID"" IS NULL) OR (""CLIENTE_ID"" = :Original_CLIENTE_ID)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("ID_CLIENTE", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "ID_CLIENTE", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("NOMBRE", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "NOMBRE", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("APELLIDO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "APELLIDO", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("TIPO_EMPRESA", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "TIPO_EMPRESA", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("CORREO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "CORREO", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("USUARIO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "USUARIO", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("CONTRASENA", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "CONTRASENA", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("FECHA_REGISTRO", global::System.Data.OracleClient.OracleType.DateTime, 0, global::System.Data.ParameterDirection.Input, "FECHA_REGISTRO", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_ID_CLIENTE", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "ID_CLIENTE", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_NOMBRE", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "NOMBRE", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_NOMBRE", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "NOMBRE", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_APELLIDO", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "APELLIDO", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_APELLIDO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "APELLIDO", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_TIPO_EMPRESA", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "TIPO_EMPRESA", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_TIPO_EMPRESA", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "TIPO_EMPRESA", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_CORREO", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "CORREO", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_CORREO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "CORREO", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_USUARIO", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "USUARIO", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_USUARIO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "USUARIO", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_CONTRASENA", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "CONTRASENA", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_CONTRASENA", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "CONTRASENA", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_FECHA_REGISTRO", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "FECHA_REGISTRO", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_FECHA_REGISTRO", global::System.Data.OracleClient.OracleType.DateTime, 0, global::System.Data.ParameterDirection.Input, "FECHA_REGISTRO", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("ID_REPORTE", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "ID_REPORTE", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("NUMERO", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "NUMERO", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("TITULO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "TITULO", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("TIPO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "TIPO", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("DESCRIPCION", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "DESCRIPCION", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("FECHA_CREACION", global::System.Data.OracleClient.OracleType.DateTime, 0, global::System.Data.ParameterDirection.Input, "FECHA_CREACION", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("ADMINISTRADOR_ID", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "ADMINISTRADOR_ID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("CLIENTE_ID", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "CLIENTE_ID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_ID_REPORTE", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "ID_REPORTE", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_NUMERO", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "NUMERO", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_TITULO", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "TITULO", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_TITULO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "TITULO", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_TIPO", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "TIPO", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_TIPO", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "TIPO", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_DESCRIPCION", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "DESCRIPCION", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_DESCRIPCION", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "DESCRIPCION", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_FECHA_CREACION", global::System.Data.OracleClient.OracleType.DateTime, 0, global::System.Data.ParameterDirection.Input, "FECHA_CREACION", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_ADMINISTRADOR_ID", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "ADMINISTRADOR_ID", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_ADMINISTRADOR_ID", global::System.Data.OracleClient.OracleType.NVarChar, 0, global::System.Data.ParameterDirection.Input, "ADMINISTRADOR_ID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("IsNull_CLIENTE_ID", global::System.Data.OracleClient.OracleType.Int32, 0, global::System.Data.ParameterDirection.Input, "CLIENTE_ID", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_CLIENTE_ID", global::System.Data.OracleClient.OracleType.Number, 0, global::System.Data.ParameterDirection.Input, "CLIENTE_ID", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             this._connection = new global::System.Data.OracleClient.OracleConnection();
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             this._connection.ConnectionString = global::NMA_Admin.Properties.Settings.Default.nmabd;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             this._commandCollection = new global::System.Data.OracleClient.OracleCommand[1];
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             this._commandCollection[0] = new global::System.Data.OracleClient.OracleCommand();
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT ID_CLIENTE, NOMBRE, APELLIDO, TIPO_EMPRESA, CORREO, USUARIO, CONTRASENA, F" +
-                "ECHA_REGISTRO FROM NMA.CLIENTE";
+            this._commandCollection[0].CommandText = "SELECT ID_REPORTE, NUMERO, TITULO, TIPO, DESCRIPCION, FECHA_CREACION, ADMINISTRAD" +
+                "OR_ID, CLIENTE_ID FROM NMA.REPORTE";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1136,7 +1071,7 @@ namespace NMA_Admin.nmabdTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(nmabd.CLIENTEDataTable dataTable) {
+        public virtual int Fill(DataSetrepo.REPORTEDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1149,9 +1084,9 @@ namespace NMA_Admin.nmabdTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual nmabd.CLIENTEDataTable GetData() {
+        public virtual DataSetrepo.REPORTEDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            nmabd.CLIENTEDataTable dataTable = new nmabd.CLIENTEDataTable();
+            DataSetrepo.REPORTEDataTable dataTable = new DataSetrepo.REPORTEDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1159,15 +1094,15 @@ namespace NMA_Admin.nmabdTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(nmabd.CLIENTEDataTable dataTable) {
+        public virtual int Update(DataSetrepo.REPORTEDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(nmabd dataSet) {
-            return this.Adapter.Update(dataSet, "CLIENTE");
+        public virtual int Update(DataSetrepo dataSet) {
+            return this.Adapter.Update(dataSet, "REPORTE");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1189,63 +1124,49 @@ namespace NMA_Admin.nmabdTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(decimal Original_ID_CLIENTE, string Original_NOMBRE, string Original_APELLIDO, string Original_TIPO_EMPRESA, string Original_CORREO, string Original_USUARIO, string Original_CONTRASENA, global::System.Nullable<global::System.DateTime> Original_FECHA_REGISTRO) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_ID_CLIENTE));
-            if ((Original_NOMBRE == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+        public virtual int Delete(decimal Original_ID_REPORTE, decimal Original_NUMERO, string Original_TITULO, string Original_TIPO, string Original_DESCRIPCION, System.DateTime Original_FECHA_CREACION, string Original_ADMINISTRADOR_ID, global::System.Nullable<decimal> Original_CLIENTE_ID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((decimal)(Original_ID_REPORTE));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((decimal)(Original_NUMERO));
+            if ((Original_TITULO == null)) {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_NOMBRE));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_TITULO));
             }
-            if ((Original_APELLIDO == null)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_APELLIDO));
-            }
-            if ((Original_TIPO_EMPRESA == null)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            if ((Original_TIPO == null)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_TIPO_EMPRESA));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_TIPO));
             }
-            if ((Original_CORREO == null)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            if ((Original_DESCRIPCION == null)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_CORREO));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_DESCRIPCION));
             }
-            if ((Original_USUARIO == null)) {
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_FECHA_CREACION));
+            if ((Original_ADMINISTRADOR_ID == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_USUARIO));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_ADMINISTRADOR_ID));
             }
-            if ((Original_CONTRASENA == null)) {
+            if ((Original_CLIENTE_ID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((decimal)(Original_CLIENTE_ID.Value));
+            }
+            else {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_CONTRASENA));
-            }
-            if ((Original_FECHA_REGISTRO.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((System.DateTime)(Original_FECHA_REGISTRO.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1267,46 +1188,36 @@ namespace NMA_Admin.nmabdTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(decimal ID_CLIENTE, string NOMBRE, string APELLIDO, string TIPO_EMPRESA, string CORREO, string USUARIO, string CONTRASENA, global::System.Nullable<global::System.DateTime> FECHA_REGISTRO) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(ID_CLIENTE));
-            if ((NOMBRE == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(NOMBRE));
-            }
-            if ((APELLIDO == null)) {
+        public virtual int Insert(decimal ID_REPORTE, decimal NUMERO, string TITULO, string TIPO, string DESCRIPCION, System.DateTime FECHA_CREACION, string ADMINISTRADOR_ID, global::System.Nullable<decimal> CLIENTE_ID) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((decimal)(ID_REPORTE));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(NUMERO));
+            if ((TITULO == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(APELLIDO));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(TITULO));
             }
-            if ((TIPO_EMPRESA == null)) {
+            if ((TIPO == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(TIPO_EMPRESA));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(TIPO));
             }
-            if ((CORREO == null)) {
+            if ((DESCRIPCION == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(CORREO));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(DESCRIPCION));
             }
-            if ((USUARIO == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(USUARIO));
-            }
-            if ((CONTRASENA == null)) {
+            this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(FECHA_CREACION));
+            if ((ADMINISTRADOR_ID == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(CONTRASENA));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(ADMINISTRADOR_ID));
             }
-            if ((FECHA_REGISTRO.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(FECHA_REGISTRO.Value));
+            if ((CLIENTE_ID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((decimal)(CLIENTE_ID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
@@ -1332,121 +1243,97 @@ namespace NMA_Admin.nmabdTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    decimal ID_CLIENTE, 
-                    string NOMBRE, 
-                    string APELLIDO, 
-                    string TIPO_EMPRESA, 
-                    string CORREO, 
-                    string USUARIO, 
-                    string CONTRASENA, 
-                    global::System.Nullable<global::System.DateTime> FECHA_REGISTRO, 
-                    decimal Original_ID_CLIENTE, 
-                    string Original_NOMBRE, 
-                    string Original_APELLIDO, 
-                    string Original_TIPO_EMPRESA, 
-                    string Original_CORREO, 
-                    string Original_USUARIO, 
-                    string Original_CONTRASENA, 
-                    global::System.Nullable<global::System.DateTime> Original_FECHA_REGISTRO) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(ID_CLIENTE));
-            if ((NOMBRE == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(NOMBRE));
-            }
-            if ((APELLIDO == null)) {
+                    decimal ID_REPORTE, 
+                    decimal NUMERO, 
+                    string TITULO, 
+                    string TIPO, 
+                    string DESCRIPCION, 
+                    System.DateTime FECHA_CREACION, 
+                    string ADMINISTRADOR_ID, 
+                    global::System.Nullable<decimal> CLIENTE_ID, 
+                    decimal Original_ID_REPORTE, 
+                    decimal Original_NUMERO, 
+                    string Original_TITULO, 
+                    string Original_TIPO, 
+                    string Original_DESCRIPCION, 
+                    System.DateTime Original_FECHA_CREACION, 
+                    string Original_ADMINISTRADOR_ID, 
+                    global::System.Nullable<decimal> Original_CLIENTE_ID) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((decimal)(ID_REPORTE));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(NUMERO));
+            if ((TITULO == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(APELLIDO));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(TITULO));
             }
-            if ((TIPO_EMPRESA == null)) {
+            if ((TIPO == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(TIPO_EMPRESA));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(TIPO));
             }
-            if ((CORREO == null)) {
+            if ((DESCRIPCION == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(CORREO));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(DESCRIPCION));
             }
-            if ((USUARIO == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(USUARIO));
-            }
-            if ((CONTRASENA == null)) {
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(FECHA_CREACION));
+            if ((ADMINISTRADOR_ID == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(CONTRASENA));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(ADMINISTRADOR_ID));
             }
-            if ((FECHA_REGISTRO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(FECHA_REGISTRO.Value));
+            if ((CLIENTE_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(CLIENTE_ID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(Original_ID_CLIENTE));
-            if ((Original_NOMBRE == null)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((decimal)(Original_ID_REPORTE));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_NUMERO));
+            if ((Original_TITULO == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_NOMBRE));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_TITULO));
             }
-            if ((Original_APELLIDO == null)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_APELLIDO));
-            }
-            if ((Original_TIPO_EMPRESA == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            if ((Original_TIPO == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_TIPO_EMPRESA));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_TIPO));
             }
-            if ((Original_CORREO == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            if ((Original_DESCRIPCION == null)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_CORREO));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_DESCRIPCION));
             }
-            if ((Original_USUARIO == null)) {
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_FECHA_CREACION));
+            if ((Original_ADMINISTRADOR_ID == null)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_USUARIO));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_ADMINISTRADOR_ID));
             }
-            if ((Original_CONTRASENA == null)) {
+            if ((Original_CLIENTE_ID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((decimal)(Original_CLIENTE_ID.Value));
+            }
+            else {
                 this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_CONTRASENA));
-            }
-            if ((Original_FECHA_REGISTRO.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((System.DateTime)(Original_FECHA_REGISTRO.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1468,8 +1355,8 @@ namespace NMA_Admin.nmabdTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NOMBRE, string APELLIDO, string TIPO_EMPRESA, string CORREO, string USUARIO, string CONTRASENA, global::System.Nullable<global::System.DateTime> FECHA_REGISTRO, decimal Original_ID_CLIENTE, string Original_NOMBRE, string Original_APELLIDO, string Original_TIPO_EMPRESA, string Original_CORREO, string Original_USUARIO, string Original_CONTRASENA, global::System.Nullable<global::System.DateTime> Original_FECHA_REGISTRO) {
-            return this.Update(Original_ID_CLIENTE, NOMBRE, APELLIDO, TIPO_EMPRESA, CORREO, USUARIO, CONTRASENA, FECHA_REGISTRO, Original_ID_CLIENTE, Original_NOMBRE, Original_APELLIDO, Original_TIPO_EMPRESA, Original_CORREO, Original_USUARIO, Original_CONTRASENA, Original_FECHA_REGISTRO);
+        public virtual int Update(decimal NUMERO, string TITULO, string TIPO, string DESCRIPCION, System.DateTime FECHA_CREACION, string ADMINISTRADOR_ID, global::System.Nullable<decimal> CLIENTE_ID, decimal Original_ID_REPORTE, decimal Original_NUMERO, string Original_TITULO, string Original_TIPO, string Original_DESCRIPCION, System.DateTime Original_FECHA_CREACION, string Original_ADMINISTRADOR_ID, global::System.Nullable<decimal> Original_CLIENTE_ID) {
+            return this.Update(Original_ID_REPORTE, NUMERO, TITULO, TIPO, DESCRIPCION, FECHA_CREACION, ADMINISTRADOR_ID, CLIENTE_ID, Original_ID_REPORTE, Original_NUMERO, Original_TITULO, Original_TIPO, Original_DESCRIPCION, Original_FECHA_CREACION, Original_ADMINISTRADOR_ID, Original_CLIENTE_ID);
         }
     }
     
@@ -1485,7 +1372,7 @@ namespace NMA_Admin.nmabdTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private CLIENTETableAdapter _cLIENTETableAdapter;
+        private REPORTETableAdapter _rEPORTETableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1507,12 +1394,12 @@ namespace NMA_Admin.nmabdTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public CLIENTETableAdapter CLIENTETableAdapter {
+        public REPORTETableAdapter REPORTETableAdapter {
             get {
-                return this._cLIENTETableAdapter;
+                return this._rEPORTETableAdapter;
             }
             set {
-                this._cLIENTETableAdapter = value;
+                this._rEPORTETableAdapter = value;
             }
         }
         
@@ -1535,9 +1422,9 @@ namespace NMA_Admin.nmabdTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._cLIENTETableAdapter != null) 
-                            && (this._cLIENTETableAdapter.Connection != null))) {
-                    return this._cLIENTETableAdapter.Connection;
+                if (((this._rEPORTETableAdapter != null) 
+                            && (this._rEPORTETableAdapter.Connection != null))) {
+                    return this._rEPORTETableAdapter.Connection;
                 }
                 return null;
             }
@@ -1552,7 +1439,7 @@ namespace NMA_Admin.nmabdTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._cLIENTETableAdapter != null)) {
+                if ((this._rEPORTETableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1564,14 +1451,14 @@ namespace NMA_Admin.nmabdTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(nmabd dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSetrepo dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._cLIENTETableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CLIENTE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._rEPORTETableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.REPORTE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._cLIENTETableAdapter.Update(updatedRows));
+                    result = (result + this._rEPORTETableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1583,13 +1470,13 @@ namespace NMA_Admin.nmabdTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(nmabd dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSetrepo dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._cLIENTETableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CLIENTE.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._rEPORTETableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.REPORTE.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._cLIENTETableAdapter.Update(addedRows));
+                    result = (result + this._rEPORTETableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1601,13 +1488,13 @@ namespace NMA_Admin.nmabdTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(nmabd dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSetrepo dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._cLIENTETableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CLIENTE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._rEPORTETableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.REPORTE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._cLIENTETableAdapter.Update(deletedRows));
+                    result = (result + this._rEPORTETableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1643,15 +1530,15 @@ namespace NMA_Admin.nmabdTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(nmabd dataSet) {
+        public virtual int UpdateAll(DataSetrepo dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._cLIENTETableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._cLIENTETableAdapter.Connection) == false))) {
+            if (((this._rEPORTETableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._rEPORTETableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
@@ -1687,15 +1574,13 @@ namespace NMA_Admin.nmabdTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._cLIENTETableAdapter != null)) {
-                    revertConnections.Add(this._cLIENTETableAdapter, this._cLIENTETableAdapter.Connection);
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
-                    this._cLIENTETableAdapter.Connection = ((global::System.Data.OracleClient.OracleConnection)(workConnection));
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
-                    this._cLIENTETableAdapter.Transaction = ((global::System.Data.OracleClient.OracleTransaction)(workTransaction));
-                    if (this._cLIENTETableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._cLIENTETableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._cLIENTETableAdapter.Adapter);
+                if ((this._rEPORTETableAdapter != null)) {
+                    revertConnections.Add(this._rEPORTETableAdapter, this._rEPORTETableAdapter.Connection);
+                    this._rEPORTETableAdapter.Connection = ((global::System.Data.OracleClient.OracleConnection)(workConnection));
+                    this._rEPORTETableAdapter.Transaction = ((global::System.Data.OracleClient.OracleTransaction)(workTransaction));
+                    if (this._rEPORTETableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._rEPORTETableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._rEPORTETableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1756,11 +1641,9 @@ namespace NMA_Admin.nmabdTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._cLIENTETableAdapter != null)) {
-#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
-                    this._cLIENTETableAdapter.Connection = ((global::System.Data.OracleClient.OracleConnection)(revertConnections[this._cLIENTETableAdapter]));
-#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
-                    this._cLIENTETableAdapter.Transaction = null;
+                if ((this._rEPORTETableAdapter != null)) {
+                    this._rEPORTETableAdapter.Connection = ((global::System.Data.OracleClient.OracleConnection)(revertConnections[this._rEPORTETableAdapter]));
+                    this._rEPORTETableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

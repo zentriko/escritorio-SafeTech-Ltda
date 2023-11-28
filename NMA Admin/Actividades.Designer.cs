@@ -842,13 +842,19 @@ namespace NMA_Admin.ActividadesTableAdapters {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class ACTIVIDADTableAdapter : global::System.ComponentModel.Component {
         
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         private global::System.Data.OracleClient.OracleDataAdapter _adapter;
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
         
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         private global::System.Data.OracleClient.OracleConnection _connection;
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
         
         private global::System.Data.OracleClient.OracleTransaction _transaction;
         
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         private global::System.Data.OracleClient.OracleCommand[] _commandCollection;
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
         
         private bool _clearBeforeFill;
         
@@ -860,7 +866,9 @@ namespace NMA_Admin.ActividadesTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         protected internal global::System.Data.OracleClient.OracleDataAdapter Adapter {
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             get {
                 if ((this._adapter == null)) {
                     this.InitAdapter();
@@ -871,7 +879,9 @@ namespace NMA_Admin.ActividadesTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         internal global::System.Data.OracleClient.OracleConnection Connection {
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             get {
                 if ((this._connection == null)) {
                     this.InitConnection();
@@ -891,7 +901,9 @@ namespace NMA_Admin.ActividadesTableAdapters {
                 }
                 for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
                     if ((this.CommandCollection[i] != null)) {
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
                         ((global::System.Data.OracleClient.OracleCommand)(this.CommandCollection[i])).Connection = value;
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
                     }
                 }
             }
@@ -925,7 +937,9 @@ namespace NMA_Admin.ActividadesTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         protected global::System.Data.OracleClient.OracleCommand[] CommandCollection {
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             get {
                 if ((this._commandCollection == null)) {
                     this.InitCommandCollection();
@@ -948,7 +962,9 @@ namespace NMA_Admin.ActividadesTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitAdapter() {
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             this._adapter = new global::System.Data.OracleClient.OracleDataAdapter();
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "ACTIVIDAD";
@@ -961,7 +977,9 @@ namespace NMA_Admin.ActividadesTableAdapters {
             tableMapping.ColumnMappings.Add("CLIENTE_ID_CLIENTE", "CLIENTE_ID_CLIENTE");
             tableMapping.ColumnMappings.Add("CHECKLIST_ID_CHECK", "CHECKLIST_ID_CHECK");
             this._adapter.TableMappings.Add(tableMapping);
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             this._adapter.DeleteCommand = new global::System.Data.OracleClient.OracleCommand();
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = @"DELETE FROM ""ADMINISTRADOR"".""ACTIVIDAD"" WHERE ((""ID_ACTIVIDAD"" = :Original_ID_ACTIVIDAD) AND ((:IsNull_ESTADO = 1 AND ""ESTADO"" IS NULL) OR (""ESTADO"" = :Original_ESTADO)) AND ((:IsNull_NOMBRE_ACT = 1 AND ""NOMBRE_ACT"" IS NULL) OR (""NOMBRE_ACT"" = :Original_NOMBRE_ACT)) AND ((:IsNull_FECHA = 1 AND ""FECHA"" IS NULL) OR (""FECHA"" = :Original_FECHA)) AND (""ADMINISTRADOR_ID_ADMIN"" = :p2) AND (""PROFESIONAL_ID_PRO"" = :Original_PROFESIONAL_ID_PRO) AND (""CLIENTE_ID_CLIENTE"" = :Original_CLIENTE_ID_CLIENTE) AND (""CHECKLIST_ID_CHECK"" = :Original_CHECKLIST_ID_CHECK))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
@@ -976,7 +994,9 @@ namespace NMA_Admin.ActividadesTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_PROFESIONAL_ID_PRO", global::System.Data.OracleClient.OracleType.Char, 0, global::System.Data.ParameterDirection.Input, "PROFESIONAL_ID_PRO", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_CLIENTE_ID_CLIENTE", global::System.Data.OracleClient.OracleType.Char, 0, global::System.Data.ParameterDirection.Input, "CLIENTE_ID_CLIENTE", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("Original_CHECKLIST_ID_CHECK", global::System.Data.OracleClient.OracleType.Char, 0, global::System.Data.ParameterDirection.Input, "CHECKLIST_ID_CHECK", global::System.Data.DataRowVersion.Original, false, null));
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             this._adapter.InsertCommand = new global::System.Data.OracleClient.OracleCommand();
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO ""ADMINISTRADOR"".""ACTIVIDAD"" (""ID_ACTIVIDAD"", ""ESTADO"", ""NOMBRE_ACT"", ""FECHA"", ""ADMINISTRADOR_ID_ADMIN"", ""PROFESIONAL_ID_PRO"", ""CLIENTE_ID_CLIENTE"", ""CHECKLIST_ID_CHECK"") VALUES (:ID_ACTIVIDAD, :ESTADO, :NOMBRE_ACT, :FECHA, :p1, :PROFESIONAL_ID_PRO, :CLIENTE_ID_CLIENTE, :CHECKLIST_ID_CHECK)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
@@ -988,7 +1008,9 @@ namespace NMA_Admin.ActividadesTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("PROFESIONAL_ID_PRO", global::System.Data.OracleClient.OracleType.Char, 0, global::System.Data.ParameterDirection.Input, "PROFESIONAL_ID_PRO", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("CLIENTE_ID_CLIENTE", global::System.Data.OracleClient.OracleType.Char, 0, global::System.Data.ParameterDirection.Input, "CLIENTE_ID_CLIENTE", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OracleClient.OracleParameter("CHECKLIST_ID_CHECK", global::System.Data.OracleClient.OracleType.Char, 0, global::System.Data.ParameterDirection.Input, "CHECKLIST_ID_CHECK", global::System.Data.DataRowVersion.Current, false, null));
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             this._adapter.UpdateCommand = new global::System.Data.OracleClient.OracleCommand();
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE ""ADMINISTRADOR"".""ACTIVIDAD"" SET ""ID_ACTIVIDAD"" = :ID_ACTIVIDAD, ""ESTADO"" = :ESTADO, ""NOMBRE_ACT"" = :NOMBRE_ACT, ""FECHA"" = :FECHA, ""ADMINISTRADOR_ID_ADMIN"" = :p1, ""PROFESIONAL_ID_PRO"" = :PROFESIONAL_ID_PRO, ""CLIENTE_ID_CLIENTE"" = :CLIENTE_ID_CLIENTE, ""CHECKLIST_ID_CHECK"" = :CHECKLIST_ID_CHECK WHERE ((""ID_ACTIVIDAD"" = :Original_ID_ACTIVIDAD) AND ((:IsNull_ESTADO = 1 AND ""ESTADO"" IS NULL) OR (""ESTADO"" = :Original_ESTADO)) AND ((:IsNull_NOMBRE_ACT = 1 AND ""NOMBRE_ACT"" IS NULL) OR (""NOMBRE_ACT"" = :Original_NOMBRE_ACT)) AND ((:IsNull_FECHA = 1 AND ""FECHA"" IS NULL) OR (""FECHA"" = :Original_FECHA)) AND (""ADMINISTRADOR_ID_ADMIN"" = :p2) AND (""PROFESIONAL_ID_PRO"" = :Original_PROFESIONAL_ID_PRO) AND (""CLIENTE_ID_CLIENTE"" = :Original_CLIENTE_ID_CLIENTE) AND (""CHECKLIST_ID_CHECK"" = :Original_CHECKLIST_ID_CHECK))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
@@ -1016,15 +1038,21 @@ namespace NMA_Admin.ActividadesTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             this._connection = new global::System.Data.OracleClient.OracleConnection();
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             this._connection.ConnectionString = global::NMA_Admin.Properties.Settings.Default.ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             this._commandCollection = new global::System.Data.OracleClient.OracleCommand[1];
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             this._commandCollection[0] = new global::System.Data.OracleClient.OracleCommand();
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID_ACTIVIDAD, ESTADO, NOMBRE_ACT, FECHA, ADMINISTRADOR_ID_ADMIN, PROFESION" +
                 "AL_ID_PRO, CLIENTE_ID_CLIENTE, CHECKLIST_ID_CHECK FROM ADMINISTRADOR.ACTIVIDAD";
@@ -1592,7 +1620,9 @@ namespace NMA_Admin.ActividadesTableAdapters {
                 //
                 if ((this._aCTIVIDADTableAdapter != null)) {
                     revertConnections.Add(this._aCTIVIDADTableAdapter, this._aCTIVIDADTableAdapter.Connection);
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
                     this._aCTIVIDADTableAdapter.Connection = ((global::System.Data.OracleClient.OracleConnection)(workConnection));
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
                     this._aCTIVIDADTableAdapter.Transaction = ((global::System.Data.OracleClient.OracleTransaction)(workTransaction));
                     if (this._aCTIVIDADTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._aCTIVIDADTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
@@ -1658,7 +1688,9 @@ namespace NMA_Admin.ActividadesTableAdapters {
                     workConnection.Close();
                 }
                 if ((this._aCTIVIDADTableAdapter != null)) {
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
                     this._aCTIVIDADTableAdapter.Connection = ((global::System.Data.OracleClient.OracleConnection)(revertConnections[this._aCTIVIDADTableAdapter]));
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
                     this._aCTIVIDADTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {

@@ -9,14 +9,18 @@
 
     public class OracleDBManager
     {
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
         private OracleConnection connection;
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
         private string connectionString;
 
         public OracleDBManager(string dataSource, string userId, string password)
         {
             // Define la cadena de conexión en el constructor
             connectionString = $"User Id=nma;Password=nma123;Data Source=xe";
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             connection = new OracleConnection(connectionString);
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
         }
 
         public bool OpenConnection()
@@ -66,6 +70,8 @@
                 // Consulta SQL para obtener el último número de código
                 string query = "SELECT MAX(ID_CLIENTE) FROM CLIENTE";
 
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
                 using (OracleCommand command = new OracleCommand(query, connection))
                 {
                     object result = command.ExecuteScalar();
@@ -74,6 +80,8 @@
                         numeroSiguiente = Convert.ToInt32(result) + 1;
                     }
                 }
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
 
                 CloseConnection();
             }

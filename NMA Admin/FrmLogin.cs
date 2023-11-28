@@ -20,7 +20,11 @@ namespace NMA_Admin
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             OracleConnection con = new OracleConnection("DATA SOURCE = xe; PASSWORD=nma123; USER ID=nma");
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             con.Open();
             MessageBox.Show("Conexión Exitosa");
             con.Close();
@@ -39,7 +43,7 @@ namespace NMA_Admin
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(txtboxUsuario.Text == "admin" && txtboxContrasena.Text == "123") 
+            if(txtboxUsuario.Text == "admin" && txtboxContrasena.Text == "admin12345") 
             {
                 
                 FrmMenu menu = new FrmMenu();

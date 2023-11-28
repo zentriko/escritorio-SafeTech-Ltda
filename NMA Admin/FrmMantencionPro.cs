@@ -35,6 +35,8 @@ namespace NMA_Admin
                 int idProfesional = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells["iDPRODataGridViewTextBoxColumn"].Value);
 
                 // Realiza la eliminación en la base de datos
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
                 using (OracleConnection connection = new OracleConnection(ConnectionString))
                 {
                     try
@@ -43,6 +45,8 @@ namespace NMA_Admin
 
                         string query = "DELETE FROM profesional WHERE ID_PRO = :ID";
 
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
+#pragma warning disable CS0618 // El tipo o el miembro están obsoletos
                         using (OracleCommand command = new OracleCommand(query, connection))
                         {
                             command.Parameters.Add("ID", OracleType.Number).Value = idProfesional;
@@ -58,12 +62,16 @@ namespace NMA_Admin
                                 MessageBox.Show("No se encontró el profesional para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                         }
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show("Error al eliminar el profesional: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
+#pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             }
             else
             {
